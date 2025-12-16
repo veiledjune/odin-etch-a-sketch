@@ -12,7 +12,11 @@ function render(value = 16) {
 }
 
 function hoverEvents(div) {
-  div.style.backgroundColor = 'black';
+  const randomColors = [];
+  for (let i = 0; i < 3; i++) {
+    randomColors.push(Math.round(Math.random() * 255));
+  }
+  div.style.backgroundColor = `rgb(${randomColors[0]}, ${randomColors[1]}, ${randomColors[2]})`;
 }
 
 function updateGrid() {
